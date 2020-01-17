@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>conexionUsuarios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full (click)="creaUsuario()">Crear Usuario</button>
+  <ion-list inset class="interna">
+    <button ion-item *ngFor="let usuario of unosUsuarios" (click)="vaausu(usuario.usuario_id,usuario.nombre,usuario.clave)">
+      {{usuario.nombre}}
+      <!--ios-game-controller-b-->
+      <ion-icon name="ios-game-controller-b" item-left></ion-icon>
+    </button>
+  </ion-list>
+
+</ion-content>

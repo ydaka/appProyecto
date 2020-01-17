@@ -1,0 +1,66 @@
+<ion-menu [content]="NombreContent">
+
+  <ion-header>
+    <ion-toolbar color=colormenu>
+      <ion-title> Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--ion-content>
+
+    <ion-item>
+      <ion-icon name="logo-android" item-left></ion-icon>
+      <button color=danger ion-item clear (click)="iraopcion(perfil.ENTRADA)">
+        <b>primera opcíon</b>
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="ios-alarm" item-left></ion-icon>
+      <button color=dark ion-item clear (click)="iraopcion(perfil.ENTRADA)">
+        <b>primera opcíon</b>
+      </button>
+    </ion-item>
+
+  </ion-content-->
+
+  <ion-content>
+
+    <ion-list *ngFor="let perfil of unosperfiles">
+      <ion-item>
+        <ion-icon name="{{perfil.ICONO}}" item-left></ion-icon>
+        <button style="text-align: center;" color=dark ion-item clear (click)="iraopcion(perfil.ENTRADA)">
+          <b>{{perfil.DESCRIPCION}}</b>
+        </button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='construct'></ion-icon>
+    </button>
+    <ion-title>
+      Inventario de celulares
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content #NombreContent></ion-content>
+
+<ion-content padding>
+  <ion-item-divider style="text-align: center;" color="light" text-wrap><b>Bienvenido</b></ion-item-divider>
+  <ion-card>
+    <img src="./../../assets/imgs/padoru.png">
+    <ion-card-content>
+      <ion-card-title>
+        {{codigo}} - [{{nombre_usuario}}]
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

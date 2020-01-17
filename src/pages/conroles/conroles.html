@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>conroles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full (click)="creaRol()">Crear Rol</button>
+  <ion-list inset class="interna">
+    <button ion-item *ngFor="let rol of unosroles" (click)="vaarol(rol.rol_id,rol.desc_rol,rol.entrada,rol.icono)">
+      {{rol.desc_rol}}
+      <!--ios-game-controller-b-->
+      <ion-icon name="{{rol.icono}}" item-left></ion-icon>
+    </button>
+  </ion-list>
+
+</ion-content>

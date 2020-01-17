@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Roles</ion-title>
+  </ion-navbar>
+  <button ion-button full *ngIf="unaAccion === 'CREAR'" (click)="insertarRol()">Insertar</button>
+  <button ion-button clear block *ngIf="unaAccion === 'ACTUALIZAR'" (click)="actualizarRol()">Actualizar</button>
+  <button ion-button clear block *ngIf="unaAccion === 'ACTUALIZAR'" (click)="showmensaje2()">Eliminar</button>
+  <button ion-button clear block (click)="cancelarRol()">Cancelar</button>
+</ion-header>
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Nro Rol</ion-label>
+    <ion-input type="text" readonly="true" [(ngModel)]="miRol.rol_id"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Descripcion</ion-label>
+    <ion-input type="text" [(ngModel)]="miRol.descripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Entrada</ion-label>
+    <ion-input type="text" [(ngModel)]="miRol.entrada"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Icono</ion-label>
+    <ion-input type="text" [(ngModel)]="miRol.icono"></ion-input>
+  </ion-item>
+
+  <!--
+ <button ion-button clear block (click)="salvaEquipo()">Salva Equipo</button>
+ -->
+</ion-content>

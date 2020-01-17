@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Usuarios</ion-title>
+  </ion-navbar>
+  <button ion-button full *ngIf="unaAccion === 'CREAR'" (click)="insertarUsuario()">Insertar</button>
+  <button ion-button clear block *ngIf="unaAccion === 'ACTUALIZAR'" (click)="actualizarUsuario()">Actualizar</button>
+  <button ion-button clear block *ngIf="unaAccion === 'ACTUALIZAR'" (click)="showmensaje2()">Eliminar</button>
+  <button ion-button clear block (click)="cancelarUsuario()">Cancelar</button>
+</ion-header>
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>ID usuario</ion-label>
+    <ion-input type="text" readonly="true" [(ngModel)]="miUsuario.usuario_id"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="miUsuario.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="miUsuario.clave"></ion-input>
+  </ion-item>
+
+</ion-content>
