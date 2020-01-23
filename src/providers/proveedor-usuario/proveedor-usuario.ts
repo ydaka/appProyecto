@@ -7,8 +7,10 @@ import { ProveedorSesionProvider } from '../proveedor-sesion/proveedor-sesion';
 @Injectable()
 export class ProveedorUsuarioProvider {
 
-  private urlLogin: string = "http://localhost/miproyecto/login_user.php";//donde esta la pagina que va a consumir el web service
-  private urlPerfiles: string = "http://localhost/miproyecto/perfiles_user.php";
+  //private urlLogin: string = "http://localhost/miproyecto/login_user.php";//donde esta la pagina que va a consumir el web service
+  private urlLogin: string = "http://avatarsp.000webhostapp.com/avatars/rest/index.php/Pokemon/login_user"
+  //private urlPerfiles: string = "http://localhost/miproyecto/perfiles_user.php";
+  private urlPerfiles: string = "http://avatarsp.000webhostapp.com/avatars/rest/index.php/Pokemon/perfiles_user"
   private urlRoles: string = "http://localhost/miproyecto/consulta_roles.php";
   private urlCrudRoles: string = "http://localhost/miproyecto/crud_roles.php";
   private urlUsuarios: string = "http://localhost/miproyecto/consulta_usuarios.php";
