@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>conmovimiento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list inset class="interna">
+    <ion-item *ngFor="let dispositivo of unosdispositivos">
+      {{dispositivo.prod_nom}} {{dispositivo.color}} - {{dispositivo.imei}}
+      <ion-icon name="ios-game-controller-b" item-left></ion-icon>
+    </ion-item>
+  </ion-list>
+  <!--button ion-button full (click)="creaRol()">Siguiente</button-->
+
+</ion-content>

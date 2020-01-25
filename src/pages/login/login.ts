@@ -6,7 +6,7 @@ import { ProveedorSesionProvider } from '../../providers/proveedor-sesion/provee
 
 @IonicPage({
   name: 'login',
-  segment: 'login'
+  segment: 'login.html'
 })//Decorador se usa para dale palabras clave abreviadas para llamar//ALIAS
 
 @Component({
@@ -33,6 +33,7 @@ export class LoginPage {
     if (this.usuario != "" && this.password != "") {
       this.con.consume_login(this.usuario, this.password).subscribe(resultado => {
         //El subcribe mete la estructura del json a esta variable gracias al mapeo
+        console.log(this.usuario + " " + this.password + " Res:" + resultado.length);
         if (resultado.length > 0) {
           resultado = resultado[0];
           this.sesion.set("sesionName", resultado);
